@@ -1,0 +1,47 @@
+[init]
+	templateDir = ~/.git_template
+[color.status]
+	branch = magenta
+	untracked = cyan
+	changed = green
+	added = yellow
+[status]
+	color = true
+	short = true
+	branch = false
+[diff]
+	color = true
+	word-diff = true
+[user]
+	name = Tomas Varneckas
+	email = t.varneckas@gmail.com
+[alias]
+	standup = log --since '1 day ago' --oneline --author tomas
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	staged = diff --staged
+	diffwords = diff --color-words
+	amend = commit --amend
+	pulls = browse -- pulls
+	issues = browse -- issues
+	pop = stash pop
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	continue = rebase --continue
+	merged = branch --merged
+	abort = rebase --abort
+	reset-1 = reset HEAD~1
+	wip = commit -am \"WIP\"
+	stg = diff --staged
+[push]
+	default = current
+[core]
+	excludesfile = ~/.gitignore
+[color]
+	branch = true
+	ui = true
+[merge]
+	conflictstyle = diff3
+[rebase]
+	autosquash = true
